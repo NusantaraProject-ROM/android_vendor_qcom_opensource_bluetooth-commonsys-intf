@@ -17,15 +17,18 @@ PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
 PRODUCT_PACKAGES += BluetoothExt
 PRODUCT_PACKAGES += libbtconfigstore
-# BT Related Test app
+# BT Related Test app & Tools
 PRODUCT_PACKAGES_DEBUG += BATestApp
 PRODUCT_PACKAGES_DEBUG += BTTestApp
 PRODUCT_PACKAGES_DEBUG += HidTestApp
+PRODUCT_PACKAGES_DEBUG += btsnoop
+PRODUCT_PACKAGES_DEBUG += gatt_tool_qti_internal
+PRODUCT_PACKAGES_DEBUG += l2test_ertm
+PRODUCT_PACKAGES_DEBUG += rfc
 endif #BOARD_HAVE_BLUETOOTH_QCOM
 
 
 #FM
-PRODUCT_PACKAGES += qcom.fmradio
 PRODUCT_PACKAGES += libqcomfm_jni
 PRODUCT_PACKAGES += libfmjni
 PRODUCT_PACKAGES += fm_helium
@@ -33,6 +36,7 @@ PRODUCT_PACKAGES += libfm-hci
 PRODUCT_PACKAGES += FM2
 
 ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
+PRODUCT_BOOT_JARS += qcom.fmradio
 # system prop for fm
 PRODUCT_PROPERTY_OVERRIDES += vendor.hw.fm.init=0
 endif #BOARD_HAVE_QCOM_FM
