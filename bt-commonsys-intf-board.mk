@@ -8,8 +8,6 @@ TARGET_USE_QTI_BT_STACK := true
 
 #FM
 BOARD_HAVE_QCOM_FM := true
-BOARD_HAS_QCA_FM_SOC := "cherokee"
 
 #WIPOWER
 BOARD_USES_WIPOWER := false
-
