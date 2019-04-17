@@ -21,3 +21,7 @@ endif
 ifeq ($(filter msm8937 msm8953 msm8909, $(TARGET_BOARD_PLATFORM)),)
 #BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 endif
+
+TARGET_USE_QTI_BT_CONFIGSTORE := true
+TARGET_USE_QTI_BT_SAR := true
+TARGET_USE_QTI_VND_FWK_DETECT := true
