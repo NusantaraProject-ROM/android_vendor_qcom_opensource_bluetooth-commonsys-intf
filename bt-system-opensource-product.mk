@@ -6,7 +6,12 @@ PRODUCT_PACKAGES += antradio_app
 
 #BT
 ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
+
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
+else
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/generic/config
+endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 
 ifeq ($(TARGET_USE_QTI_BT_STACK), true)
 PRODUCT_PACKAGES += libbluetooth_qti
@@ -36,7 +41,7 @@ PRODUCT_PACKAGES += libfm-hci
 PRODUCT_PACKAGES += FM2
 
 ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
-#PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += qcom.fmradio
 # system prop for fm
 PRODUCT_PROPERTY_OVERRIDES += vendor.hw.fm.init=0
 endif #BOARD_HAVE_QCOM_FM
