@@ -19,7 +19,7 @@ ifeq ($(filter msm8996, $(TARGET_BOARD_PLATFORM)),)
 endif
 
 ifeq ($(filter msm8937 msm8953 msm8909, $(TARGET_BOARD_PLATFORM)),)
-#BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 endif
 
 TARGET_USE_QTI_BT_CONFIGSTORE := true
