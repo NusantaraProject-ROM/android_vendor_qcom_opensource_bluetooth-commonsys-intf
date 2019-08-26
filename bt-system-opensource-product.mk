@@ -55,11 +55,5 @@ PRODUCT_PACKAGES += com.quicinc.wbcservice.xml
 PRODUCT_PACKAGES += libwbc_jni
 PRODUCT_PACKAGES += com.quicinc.wipoweragent
 PRODUCT_PACKAGES += com.quicinc.wbcserviceapp
-#WIPOWER, a4wp
-PRODUCT_PACKAGES += libwipower_jni
-PRODUCT_PACKAGES += android.wipower
-PRODUCT_PACKAGES += android.wipower.xml
-PRODUCT_PACKAGES += a4wpservice
-PRODUCT_PACKAGES += wipowerservice
 endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 endif #BOARD_USES_WIPOWER
