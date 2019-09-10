@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += libfmjni
 PRODUCT_PACKAGES += fm_helium
 PRODUCT_PACKAGES += libfm-hci
 PRODUCT_PACKAGES += FM2
+PRODUCT_PACKAGES += qcom.fmradio
 PRODUCT_BOOT_JARS += qcom.fmradio
 # system prop for fm
 PRODUCT_PROPERTY_OVERRIDES += vendor.hw.fm.init=0
