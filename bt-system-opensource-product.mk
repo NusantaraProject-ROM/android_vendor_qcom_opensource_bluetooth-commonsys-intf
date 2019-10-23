@@ -30,7 +30,6 @@ endif #TARGET_USE_QTI_BT_STACK
 
 PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
-PRODUCT_PACKAGES += BluetoothExt
 PRODUCT_PACKAGES += libbtconfigstore
 PRODUCT_PACKAGES += vendor.qti.hardware.btconfigstore@1.0
 PRODUCT_PACKAGES += com.qualcomm.qti.bluetooth_audio@1.0
