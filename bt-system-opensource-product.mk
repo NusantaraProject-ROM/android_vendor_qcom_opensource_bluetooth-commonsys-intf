@@ -12,6 +12,11 @@ PRODUCT_PACKAGES += Bluetooth
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
 PRODUCT_PACKAGES += libbluetooth_qti
+
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_PACKAGES += libbluetooth_qti_jni
+endif #TARGET_USE_QTI_BT_STACK
+
 PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
 PRODUCT_PACKAGES += BluetoothExt
