@@ -10,6 +10,7 @@ ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
 PRODUCT_PACKAGES += Bluetooth
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
+TARGET_USE_QTI_BT_STACK := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
 PRODUCT_PACKAGES += libbluetooth_qti
 
