@@ -21,6 +21,12 @@ ifeq ($(TARGET_USE_QTI_BT_STACK),true)
 PRODUCT_PACKAGES += libbluetooth_qti_jni
 endif #TARGET_USE_QTI_BT_STACK
 
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
+else
+PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
+endif #TARGET_USE_QTI_BT_STACK
+
 PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
 PRODUCT_PACKAGES += BluetoothExt
