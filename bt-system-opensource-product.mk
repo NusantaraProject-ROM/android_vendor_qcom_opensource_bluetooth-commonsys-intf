@@ -11,7 +11,10 @@ PRODUCT_PACKAGES += Bluetooth
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
 TARGET_USE_QTI_BT_STACK := true
+
+PRODUCT_PACKAGE_OVERLAYS += vendor/qcom/opensource/commonsys-intf/bluetooth/overlay/qva
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
+
 PRODUCT_PACKAGES += libbluetooth_qti
 
 ifeq ($(TARGET_USE_QTI_BT_STACK),true)
@@ -30,6 +33,7 @@ PRODUCT_PACKAGES_DEBUG += gatt_tool_qti_internal
 PRODUCT_PACKAGES_DEBUG += l2test_ertm
 PRODUCT_PACKAGES_DEBUG += rfc
 else
+PRODUCT_PACKAGE_OVERLAYS += vendor/qcom/opensource/commonsys-intf/bluetooth/overlay/generic
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/generic/config
 endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 
