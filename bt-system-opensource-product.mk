@@ -1,9 +1,13 @@
 #ANT
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
+ifeq ($(BOARD_ANT_WIRELESS_DEVICE), "vfs-prerelease")
 PRODUCT_PACKAGES += AntHalService
 PRODUCT_PACKAGES += libantradio
 PRODUCT_PACKAGES += antradio_app
-PRODUCT_PACKAGES += com.qualcomm.qti.ant@1.0
+else
+PRODUCT_PACKAGES += AntHalService-Soong
+PRODUCT_PACKAGES += com.dsi.ant@1.0
+endif
 endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 
 #BT
