@@ -69,6 +69,7 @@ enum {
   FM_PROP_HW_MODE,
   FM_PROP_CTL_START,
   FM_PROP_CTL_STOP,
+  FM_STATS_PROP,
 };
 
 #endif
