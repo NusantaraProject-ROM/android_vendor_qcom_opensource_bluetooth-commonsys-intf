@@ -27,7 +27,11 @@ PRODUCT_PACKAGES += libbtconfigstore
 PRODUCT_PACKAGES += vendor.qti.hardware.btconfigstore@1.0
 PRODUCT_PACKAGES += com.qualcomm.qti.bluetooth_audio@1.0
 PRODUCT_PACKAGES += vendor.qti.hardware.bluetooth_audio@2.0
+
+ifeq ($(TARGET_USE_BT_DUN),true)
 PRODUCT_PACKAGES += vendor.qti.hardware.bluetooth_dun-V1.0-java
+PRODUCT_PACKAGES += BluetoothExt
+endif #TARGET_USE_BT_DUN
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys/packages/apps/Bluetooth
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys/system/bt/conf
