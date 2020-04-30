@@ -44,15 +44,15 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/qcom/opensource/commonsys-intf/bluetooth/over
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
 
 # BT Related Test app & Tools
-PRODUCT_PACKAGES_DEBUG += btsnoop
-PRODUCT_PACKAGES_DEBUG += gatt_tool_qti_internal
-PRODUCT_PACKAGES_DEBUG += l2cap_coc_tool
-PRODUCT_PACKAGES_DEBUG += l2test_ertm
-PRODUCT_PACKAGES_DEBUG += rfc
+PRODUCT_PACKAGES_ENG += btsnoop
+PRODUCT_PACKAGES_ENG += gatt_tool_qti_internal
+PRODUCT_PACKAGES_ENG += l2cap_coc_tool
+PRODUCT_PACKAGES_ENG += l2test_ertm
+PRODUCT_PACKAGES_ENG += rfc
 
 ifneq ($(TARGET_HAS_LOW_RAM), true)
-PRODUCT_PACKAGES_DEBUG += BTTestApp
-PRODUCT_PACKAGES_DEBUG += BATestApp
+PRODUCT_PACKAGES_ENG += BTTestApp
+PRODUCT_PACKAGES_ENG += BATestApp
 endif #TARGET_HAS_LOW_RAM
 
 else
