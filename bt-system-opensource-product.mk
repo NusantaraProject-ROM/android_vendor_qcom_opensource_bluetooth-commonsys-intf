@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
 PRODUCT_PACKAGES += libbtconfigstore
 PRODUCT_PACKAGES += vendor.qti.hardware.btconfigstore@1.0
+PRODUCT_PACKAGES += vendor.qti.hardware.btconfigstore@2.0
 PRODUCT_PACKAGES += com.qualcomm.qti.bluetooth_audio@1.0
 PRODUCT_PACKAGES += vendor.qti.hardware.bluetooth_audio@2.0
 
