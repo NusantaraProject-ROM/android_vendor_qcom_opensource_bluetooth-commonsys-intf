@@ -45,6 +45,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-
 # BT Related Test app & Tools
 PRODUCT_PACKAGES_DEBUG += btsnoop
 PRODUCT_PACKAGES_DEBUG += gatt_tool_qti_internal
+PRODUCT_PACKAGES_DEBUG += l2cap_coc_tool
 PRODUCT_PACKAGES_DEBUG += l2test_ertm
 PRODUCT_PACKAGES_DEBUG += rfc
 
