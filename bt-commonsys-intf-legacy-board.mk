@@ -25,6 +25,6 @@ TARGET_USE_BT_DUN := false
 
 ifeq ($(TARGET_BOARD_PLATFORM),msm8937)
 ifeq ($(TARGET_BOARD_SUFFIX),_32go)
-BOARD_HAVE_QTI_BT_LAZY_SERVICE := true
+TARGET_USE_QTI_BT_SAR := false
 endif
 endif
