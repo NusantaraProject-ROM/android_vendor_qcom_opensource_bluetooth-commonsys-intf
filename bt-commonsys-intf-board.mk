@@ -6,7 +6,11 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 #FM
-ifneq ($(TARGET_BOARD_TYPE),auto)
+ifeq ($(TARGET_BOARD_TYPE),auto)
+BOARD_HAVE_QCOM_FM := false
+else ifeq ($(TARGET_BOARD_AUTO),true)
+BOARD_HAVE_QCOM_FM := false
+else
 BOARD_HAVE_QCOM_FM := true
 endif
 
